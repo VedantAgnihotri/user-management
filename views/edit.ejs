@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit user</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 overflow-x-hidden">
+  
+  <div class="w-full h-full mt-10 ml-10 bg-zinc-900 text-white">
+    <div class="flex gap-5">
+        <a href="/read" class="text-blue-700">See all users</a> 
+        <a href="/" class="text-blue-700">Create users</a>
+    </div>
+    
+    <h1 class="text-[35px]">Edit User</h1>
+    <form action="/edit/<%=user._id%>" method="post" class="">
+      <input class="px-5 py-2 w-[200px] border-3 border-zinc-600 rounded-md mt-2 bg-zinc-700" placeholder="New username" name="name" value="<%=user.name%>" type="text" >
+      <input class="px-5 py-2 w-[200px] ml-1 border-3 border-zinc-600 rounded-md mt-2 bg-zinc-700" placeholder="New email" name="email" value="<%=user.email%>" type="text" >
+      <input class="px-5 py-2 w-[200px] ml-1 border-3 border-zinc-600 rounded-md mt-2 bg-zinc-700" placeholder="New image url" name="image" value="<%=user.image%>" type="text" >
+      <button class="border-3 rounded-lg px-5 py-2 bg-[#ebb505] ml-5 text-black" type="submit" value="create user">Edit user</button>
+    </form>
+  </div>
+</body>
+</html>
